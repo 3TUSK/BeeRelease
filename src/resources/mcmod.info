@@ -1,0 +1,17 @@
+[
+  {
+    "modid": "beerelease",
+    "name": "Bee Release",
+    "description": "Why not release some bees?",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateJSON": "",
+    "authorList": ["3TUSK"],
+    "credits": "ForestryMC/ForestryMC#1634 on GitHub",
+    "logoFile": "",
+    "screenshots": [],
+    "useDependencyInformation": true,
+    "requiredMods": ["forestry"]
+  }
+]
