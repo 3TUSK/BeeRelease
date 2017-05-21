@@ -18,7 +18,6 @@ package info.tritusk.beerelease;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.item.ItemTossEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -28,13 +27,12 @@ public enum BeeRelease {
     INSTANCE;
 
     @Mod.InstanceFactory
-    public BeeRelease getInstance() {
+    public static BeeRelease getInstance() {
         return INSTANCE;
     }
 
-    @Mod.EventHandler
-    public void onInit(FMLInitializationEvent event) {
-        MinecraftForge.EVENT_BUS.register(INSTANCE);
+    BeeRelease() {
+        MinecraftForge.EVENT_BUS.register(this);
     }
 
     @SubscribeEvent(priority = EventPriority.LOWEST)
